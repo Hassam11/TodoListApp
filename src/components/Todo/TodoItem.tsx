@@ -18,15 +18,15 @@ export default function TodoItem({ todos }) {
             checked={isChecked}
             className="hidden"
           />
-          <div className="w-8 h-8 flex items-center justify-center   mr-2">
+          <div className="w-8 h-8 flex items-center  justify-center   mr-2">
             {isChecked ? (
-              <FaRegCheckCircle size={40} />
+              <FaRegCheckCircle size={30} />
             ) : (
-              <FaRegCircle size={40} />
+              <FaRegCircle size={30} />
             )}
           </div>
           <p
-            className={`text-lg font-semibold ${
+            className={`text-2xl font-semibold ${
               isChecked ? "line-through text-gray-500" : ""
             }`}
           >
