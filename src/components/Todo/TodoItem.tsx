@@ -1,37 +1,11 @@
-import React, { useState } from "react";
-import { FaRegCircle, FaRegCheckCircle } from "react-icons/fa";
+import TodoCheckBox from "./TodoCheckBox";
 
 export default function TodoItem({ todos }) {
-  const [isChecked, setIsChecked] = useState(todos.completed);
-
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  };
-
   return (
     <li key={todos.id} className="flex items-center justify-between py-2 ">
       <div className="flex items-center">
         <label className="flex items-center cursor-pointer ">
-          <input
-            type="checkbox"
-            onChange={handleChange}
-            checked={isChecked}
-            className="hidden"
-          />
-          <div className="w-8 h-8 flex items-center  justify-center   mr-2">
-            {isChecked ? (
-              <FaRegCheckCircle size={30} />
-            ) : (
-              <FaRegCircle size={30} />
-            )}
-          </div>
-          <p
-            className={`text-2xl font-semibold ${
-              isChecked ? "line-through text-gray-500" : ""
-            }`}
-          >
-            {todos.task}
-          </p>
+          <TodoCheckBox todos={todos} />
         </label>
       </div>
     </li>
