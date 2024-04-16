@@ -20,7 +20,7 @@ export default function TodoForm({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col">
+    <form onSubmit={handleSubmit} className="flex flex-col w-2/3 mx-auto">
       <input
         placeholder="Add Todo"
         className="font-semibold text-2xl p-2 rounded-xl mb-3 focus:outline-none focus:ring-2 focus:ring-gray-600"
@@ -31,7 +31,7 @@ export default function TodoForm({ addTodo }) {
 
       <button
         type="submit"
-        className="bg-black text-white w-full rounded-2xl text-2xl p-1 uppercase font-semibold "
+        className="bg-black text-white w-full rounded-2xl text-2xl p-2 uppercase font-semibold "
       >
         Add
       </button>

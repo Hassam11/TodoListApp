@@ -10,7 +10,8 @@ export default function TodoContainer() {
   };
 
   return (
-    <div className="bg-white rounded-2xl w-[400px] h-[400px] flex flex-col justify-center items-center m-auto">
+    // items-center
+    <div className="bg-white rounded-2xl w-[400px] h-[400px] flex flex-col justify-center  m-auto">
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} />
     </div>

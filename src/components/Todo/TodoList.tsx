@@ -1,13 +1,11 @@
 import { ITask } from "../../model/Task.interface";
+import TodoItem from "./TodoItem";
 
 export default function TodoList({ todos }) {
-  console.log(todos);
   return (
-    <ul>
+    <ul className="w-2/3 mx-auto pt-4">
       {todos.map((todo: ITask) => (
-        <li key={todo.id}>
-          {todo.task} <span>{todo.completed}</span>
-        </li>
+        <TodoItem todos={todo} />
       ))}
     </ul>
   );
